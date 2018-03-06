@@ -12,7 +12,7 @@ lense of constraints on power. This will likely include posts on:
 
 # Plasma MVP Exit Constraint Analysis
 
-An important part of decentralization is imposing constraints on authority. These constraints limit actions of agents in a system forcing them to engage in constructive behavior. When all agents are constrained in a way in which incentives are aligned, a strong sort of trust is established. With cryptoeconomics we are able to design decentralized protocols which precisely define these constraints.
+A key part of decentralization is imposing constraints on authority. These constraints limit actions of agents in a system forcing them to engage in constructive behavior. When all agents are constrained in a way in which incentives are aligned, a strong sort of trust is established. With cryptoeconomics we are able to design decentralized protocols which precisely define these constraints.
 
 Plasma MVP is the first simple Plasma specification. It provides scalable payments using a central operator while maintaining strong security guarantees. In this post we will use payoff matrixes to identify central operators' poorly aligned incentives, address them by imposing constraints, and end up recreating the current Plasma MVP specification.
 
@@ -31,7 +31,7 @@ Let's take a look at a payoff matrix in this case. There will be two agents in o
 | **Steal another user's money** | { other\_user\_total\_eth - social\_cost, 0 } |
 | **Steal or lose everyone's money** | { total\_eth − all\_future\_fees − social\_cost, −user\_total\_eth } |
 
-Here I'm calling `social_cost` the cost to the operator's reputation and any legal actions taken against them. If the operator is well known, lives in a jurisdiction with a good legal system, this cost will be extremely large. However, it is clear that you'd never trust an anonymous internet troll to be your operator.
+Here I'm calling `social_cost` the cost to the operator's reputation and any legal actions taken against them. If the operator is well known, lives in a jurisdiction with a good legal system, this cost could be extremely large. However, it is clear that you'd never trust an anonymous internet troll to be your operator.
 
 Social cost alone can get us a long way, but there are some serious limitations. The first of which is that the mechanisms which establish a high `social_cost` are slow and inefficient. Building a reputation and proving that you aren't some hacker trying to steal coins is a slow and ill-defined process full of difficult social signaling and establishing relationships. Plus even when you do establish this trust, there is no way to prevent the risk that you might make a mistake and get hacked yourself. There is a limit to how much an unconstrained central payment operator can be trusted. However, by imposing constraints using cryptoeconomics we can do much better.
 
@@ -48,7 +48,7 @@ In our previous model, users had no recourse if the payment operator were to go 
 
 Now that users have the ability to exit, the payout matrix is wildly different. If users exit the chain in response to a Plasma operator misbehaving, it is clear that the Plasma operator will suffer huge negative utility. The only conceivable reason for misbehaving now would be a hack \(incentive to hurt the operator\), or maybe the validator wanting to impose the `exit_cost` on its users. This is a huge step forward in the power balance between user and operator.
 
-It is important to note the massive gain in "decentralization" which was achieved while not adding any new agents. This hints that decentralization is not the number of agents in a system, but instead the distribution of power within that system. By imposing a constraint on the operator, we were able to reduce how much we rely on the `social_cost` of an attack to secure the network. Instead we can rely on much more straightforward incentives, which eventually means we can trust more people to be operators. Democratizing trust like this is a pretty magical thing.
+It is important to note the massive gain in "decentralization" which was achieved while not adding any new agents. This hints that decentralization is not the number of agents in a system, but instead the distribution of power within that system. By imposing a constraint on the operator, we were able to reduce how much we rely on the `social_cost` of an attack to secure the network. Instead we can rely on much more straightforward incentives, which eventually means we can trust more people to be operators. This process of establishing trust through designing constraints is, to me, what is truly exciting about blockchains.
 
 ## Fixing More Imbalanced Incentives
 
