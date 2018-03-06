@@ -12,7 +12,7 @@ lense of constraints on power. This will likely include posts on:
 
 # Plasma MVP Exit Constraint Analysis
 
-The essence of decentralization is imposing constraints on authority. These constraints limit actions of agents in a system forcing them to engage in constructive behavior. When all agents are constrained in a way in which incentives are aligned, a strong sort of trust is established. With cryptoeconomics we are able to design decentralized protocols which precisely define these constraints.
+An important part of decentralization is imposing constraints on authority. These constraints limit actions of agents in a system forcing them to engage in constructive behavior. When all agents are constrained in a way in which incentives are aligned, a strong sort of trust is established. With cryptoeconomics we are able to design decentralized protocols which precisely define these constraints.
 
 Plasma MVP is the first simple Plasma specification. It provides scalable payments using a central operator while maintaining strong security guarantees. In this post we will use payoff matrixes to identify central operators' poorly aligned incentives, address them by imposing constraints, and end up recreating the current Plasma MVP specification.
 
@@ -50,11 +50,9 @@ Now that users have the ability to exit, the payout matrix is wildly different. 
 
 It is important to note the massive gain in "decentralization" which was achieved while not adding any new agents. This hints that decentralization is not the number of agents in a system, but instead the distribution of power within that system. By imposing a constraint on the operator, we were able to reduce how much we rely on the `social_cost` of an attack to secure the network. Instead we can rely on much more straightforward incentives, which eventually means we can trust more people to be operators. Democratizing trust like this is a pretty magical thing.
 
-## Fixing Imbalanced Incentives
+## Fixing More Imbalanced Incentives
 
 In the Plasma MVP spec, there are still some wacky incentives which reduce how much trust users can place in the system. The major risk is that an operator, or someone who's hacked the operator, can still force all users to exit the chain. If the Plasma operator tries to steal someone's money, everyone has to exit the chain and get their money back. This is an issue because that means everyone suffers the `exit_cost`. We can do better!
-
-
 
 _work in progress_
 
