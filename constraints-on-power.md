@@ -12,7 +12,7 @@ lense of constraints on power. This will likely include posts on:
 
 # Plasma MVP Exit Constraint Analysis
 
-A key part of decentralization is imposing constraints on authority. These constraints limit actions of agents in a system forcing them to engage in constructive behavior. When all agents are constrained in a way in which incentives are aligned, a strong sort of trust is established. With cryptoeconomics we are able to design decentralized protocols which precisely define these constraints.
+A key to decentralization is imposing constraints on authority. These constraints limit actions of agents in a system forcing them to engage in constructive behavior. When all agents are constrained in a way in which incentives are aligned, a strong sort of trust is established. With cryptoeconomics we are able to design decentralized protocols which precisely define these constraints.
 
 Plasma MVP is the first simple Plasma specification. It provides scalable payments using a central operator while maintaining strong security guarantees. In this post we will use payoff matrixes to identify central operators' poorly aligned incentives, address them by imposing constraints, and end up recreating the current Plasma MVP specification.
 
@@ -67,13 +67,11 @@ This is especially exciting. Notice how simple this payout matrix has become. Th
 
 With such restrictive constraints, we can now trust almost anyone to become an operator. Operators are rendered quite harmless and users are in control. We started in a world where your money is protected by someone's word and a vague threat of force. Then we moved into a world in which every user is able to retrieve their funds when an operator goes rogue. Then finally, with progressively more restrictive cryptographic and economic constraints, we can guarantee that even a rogue operator is unable to do harm.
 
-## 
+## Building the Foundations of Trust
 
+Saying stuff like blockchains revolutionize trust always sounds so handwavy. Even so, that is what just happened. Using cryptoeconomics we constructed a transparent set of constraints and incentives which, with a little analysis, can be trusted to be secure. The tools we have historically used for establishing trust, eg. social credibility, the court system, are slow and inefficient. We can now replace that outdated infrastructure.
 
+The potential for what is possible if these incentives are designed right is immense. However, I am also terrified of what could happen if we get it wrong. However, I'll save my rants on that for another post. For now, just know this super power exists, anyone can learn it, and I think the best way to ensure a positive future is by getting as many people involved from as many communities as we can. Let's build the foundations trust together with inclusivity, equality, and kindness in mind. Then maybe we can all live in a more inclusive, equal, and kind world.
 
-
-
-
-
-
+❤️
 
